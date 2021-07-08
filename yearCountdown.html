@@ -1,95 +1,49 @@
-<!DOCTYPE html >
-< html  lang =" en " >
-<头>
-    <元 字符集=“ UTF-8 ” >
-    <元 名称=视口”内容=“宽度=设备宽度，初始比例=1.0 ” >
-    < link  href =" https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap " rel ="样式表" >
-
-    < title > 2020年还剩时间</ title >
-    <风格>
-        
-        身体{
-            文本对齐：居中；
-            font-family :  'Fjalla One' , sans-serif;
-            背景色： ＃ FFF ;
-        }
-        . 框{
-            显示：内联块；
-            显示：内联块；
-            颜色： ＃ FFF ;
-            填充： 10像素；
-            边框半径： 5像素；
-        }
-        #天{
-            背景色：# 0f4d4f；
-        }
-        #小时{
-            背景颜色：# 4CAF50；
-        }
-        #分钟{
-            背景颜色：# 76250b；
-        }
-        h2 {
-            显示：内联块；
-            右边距： 10像素；
-        }
-
-
-    </风格>
-</头>
-<身体>
-    < div  id ="计数器" >
-        < h2 >
-            2021年剩余时间
-        </ h2 >    
-        
-            < h2  class =" box " id =" days " > </ h2 >
-            < h2  class =" box " id =" hours " > </ h2 >
-            < h2  class =" box " id =" minutes " > </ h2 >
-
-    </ div >
-    
-
-
-
-
-<脚本>
-    功能 倒计时  （日期） {
-    left_days  = 文档。getElementById ( "天" ) ;
-    left_hours  = 文档。getElementById ( "小时" ) ;
-    left_minutes  = 文档。getElementById ( "分钟" ) ;
-
-    结束 = 新 日期（日期）；
-    _秒 =  1000 ;
-    _分钟 =  _秒 *  60 ;
-    _hour  =  _minute  *  60 ;
-    _day  =  _hour  *  24 ;
-    }
-    功能显示 剩余 （）{
-    现在 = 新 日期（）；
-    距离 = 结束 - 现在；
-    distance2  = 新 日期（“01/01/2021 00:00 AM” ） - 现在
-    如果 （距离 <=  0  ）{
-      clearInterval  (计时器)
-      文件。getElementById （“计数器” ）。innerHTML  =  "<h2>没什么！结束了<h2>" ;
-      返回
-    }
-    否则 如果 （距离2  >  0   ）{
-      clearInterval  (计时器)
-      文件。getElementById （“计数器” ）。innerHTML  =   "<h2>2021 还没开始！</h2>" ;
-      返回
-    } 
-    天 = 数学。楼层（距离 /  _day ）
-    小时 = 数学。楼层（（距离 %  _day ） /  _hour ）
-    分钟 = 数学。楼层（（距离 %  _小时） /  _分钟）
-    left_days 。innerHTML  = 天 +  “天”
-    left_hours 。innerHTML  = 小时 +  “小时”
-    left_minutes 。innerHTML  = 分钟 +  “分钟”
-    }
-    
-
-timer  =  setInterval  ( showRemaining ,  1 ) 
-倒数计时器（ “01/01/2022 00:00 AM” ）
-</脚本>
-</正文>
-</ html >
+<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
+<div id="main">
+		<div class="calculator">
+		<input type="text" id="screen">
+      <div class="calculator__row1">
+    <button class="button">Rad</button>
+    <button class="button" >Deg</button>
+                               
+<h1 style="font-size: 200%; margin-left: 20px; margin-right: 20px">Smart Scientific Calculator</h1>
+<button class="button" id="clean">AC</button>
+</div>
+    <div class="calculator__row2">
+         <button class="button">sin</button>
+         <button class="button">cos</button>
+         <button class="button">tan</button>
+		   <button class="button dark">7</button>
+			<button class="button dark">8</button>
+			<button class="button dark">9</button>
+			<button class="button">*</button>
+    </div>
+	<div class="calculator__row3">
+        <button class="button">x^</button>
+        <button class="button">pi</button>
+        <button class="button">%</button>
+		  <button class="button dark">4</button>
+			<button class="button dark">5</button>
+			<button class="button dark">6</button>
+			<button class="button">/</button>
+	</div>
+	<div class="calculator__row4">
+      <button class="button">ln</button>
+      <button class="button">log</button>
+      <button class="button">x!</button>
+			<button class="button dark">1</button>
+			<button class="button dark">2</button>
+			<button class="button dark">3</button>
+			<button class="button">-</button>
+	</div>
+			<div class="calculator__row5">
+      <button class="button">&radic;<span class="over"></span></button>
+      <button class="button">(</button>
+      <button class="button">)</button>
+			<button class="button">.</button>
+      <button class="button dark">0</button>
+			<button class="button">=</button>
+			<button class="button">+</button>
+</div>
+</div>
+</div>
